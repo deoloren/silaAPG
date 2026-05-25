@@ -454,3 +454,51 @@ legend {
     border: 1px solid #334155;
     background: none;
 }
+
+
+.data-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    min-width: 600px;
+}
+
+.data-tabel caption {
+    text-align: left;
+    font-size: 0.85rem;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.data-tabel th,
+.data-tabel td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom:  1px solid white;
+}
+
+.data-tabel th {
+    background-color:  #1e293b;
+    color: #f1f5f9;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-tabel td {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.data-tabel tbody tr:nth-child(even){
+    background-color: rgba(212, 204, 207, 0.247);
+}
+
+.data-tabel tbody tr:hover {
+    background-color: #1e293b;
+}
+
+@media (max-width: 768px) {
+    .data-table { font-size: 0.8rem; }
+    .data-tabel th, .data-tabel td { padding: 8px 10px; }
+}
