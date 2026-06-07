@@ -1,0 +1,609 @@
+/* ================================
+   CSS DASAR — SILA
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+h1,
+h2,
+h3 {
+    color: #f1f5f9;
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #93c5fd;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #334155;
+}
+
+
+/* ================================
+   CSS LANJUTAN — SILA
+   ================================ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.section-desc {
+    color: #94a3b8;
+    margin-bottom: 16px;
+}
+
+
+/* ================================
+   PAGE LAYOUT — SILA
+   ================================ */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.navbar {
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+    padding: 16px 0;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+.hero {
+    padding: 64px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.25rem;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    color: #94a3b8;
+    margin-bottom: 24px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid #334155;
+    color: #e2e8f0;
+}
+
+.btn-outline:hover {
+    background-color: #1e293b;
+    color: #f1f5f9;
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 48px 0;
+    border-top: 1px solid #334155;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+.card:hover {
+    border-color: #475569;
+    transform: translateY(-2px);
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.card-code {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #60a5fa;
+    background-color: rgba(37, 99, 235, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.steps-grid {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px 16px;
+    transition: border-color 0.3s;
+}
+
+.step:hover {
+    border-color: #475569;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #2563eb;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 12px;
+}
+
+.step p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 16px;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #60a5fa;
+}
+
+.stat-label {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+.footer {
+    border-top: 1px solid #334155;
+    margin-top: 32px;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    padding: 32px 0;
+}
+
+.footer-inner p {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+.footer-inner h4 {
+    color: #f1f5f9;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding: 16px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+
+/* ================================
+   STRUKTUR NAVIGASI & MENU — SILA
+   ================================ */
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+}
+
+.nav-menu li a {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #f1f5f9;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-menu li a.active {
+    color: #f1f5f9;
+    font-weight: 600;
+    background-color: rgba(37, 99, 235, 0.15);
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav ul li {
+    margin-bottom: 4px;
+}
+
+.footer-nav ul li a {
+    color: #64748b;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    color: #93c5fd;
+}
+
+
+
+
+/* ================================
+   MEDIA QUERY & RESPONSIF — SILA
+   ================================ */
+
+/* --------------------------------
+   Animasi CSS (@keyframes)
+   Mendefinisikan gerakan bernama 'fadeIn':
+   - from: posisi awal (tersembunyi, geser ke bawah)
+   - to: posisi akhir (terlihat, posisi normal)
+   -------------------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* transparan penuh */
+        transform: translateY(20px);
+        /* geser 20px ke bawah */
+    }
+
+    to {
+        opacity: 1;
+        /* terlihat penuh */
+        transform: translateY(0);
+        /* posisi normal */
+    }
+}
+
+/* Hero section mendapat animasi fadeIn selama 0.6 detik */
+.hero {
+    animation: fadeIn 0.6s ease;
+}
+
+
+
+/* --------------------------------
+   Hamburger Menu Animasi
+   Saat checkbox dicentang, 3 garis hamburger
+   berubah menjadi tanda 'X' (close):
+   - Garis ke-1: putar 45° ke bawah
+   - Garis ke-2: hilang (opacity 0)
+   - Garis ke-3: putar -45° ke atas
+   -------------------------------- */
+
+.nav-toggle {
+    display: none;
+    /* checkbox tersembunyi */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #f1f5f9;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+    /* animasi garis */
+}
+
+/* Garis-1: miring ke kanan membentuk '/' */
+.nav-toggle:checked~label .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+/* Garis-2: menghilang */
+.nav-toggle:checked~label .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+/* Garis-3: miring ke kiri membentuk '\' */
+.nav-toggle:checked~label .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --------------------------------
+   Responsive: Tablet & Mobile (<= 768px)
+   Semua grid/flex berubah ke 1 kolom/baris
+   agar konten tidak terlalu sempit di layar kecil.
+   -------------------------------- */
+   
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+    .navbar-inner {
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: flex;
+        /* tampilkan hamburger */
+    }
+
+    nav {
+        width: 100%;
+        order: 3;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 8px 0;
+        border-top: 1px solid #334155;
+        margin-top: 12px;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 10px 0;
+        border-radius: 0;
+    }
+
+    .nav-toggle:checked~nav .nav-menu {
+        display: flex;
+    }
+
+    /* SAMBUNG DARI SINI */
+    /* ================== */
+
+    .nav-menu {
+        gap: 4px;
+    }
+
+    /* Judul hero lebih kecil di mobile */
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Tombol berubah jadi vertikal (kolom) */
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Cards: dari 2 kolom → 1 kolom */
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Steps & stats berubah ke arah vertikal */
+    .steps-grid {
+        flex-direction: column;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+    }
+
+    /* Footer: dari 2 kolom → 1 kolom */
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* --------------------------------
+   Responsive: Layar Sangat Kecil (<= 480px)
+   Untuk smartphone kecil:
+   - Judul lebih kecil lagi
+   - Tombol lebar penuh (100%)
+   -------------------------------- */
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.25rem;
+    }
+
+    /* Tombol mengisi penuh lebar layar */
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* FORMS - SILA */
+
+.form-card{
+    max-width: 640px;
+    /* lebar maksimum form */
+    margin: 0 auto;
+    /* tengah halaman */
+}
+
+fieldset{
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 24px;
+    background-color: #1e293b;
+}
+
+legend{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    padding: 0 8px;
+}
+
+
+/* Form Group 
+1 kelompok 1 label + 1 input*/
+
+.form-group{
+    margin-bottom: 16px;
+}
+
+.form-group label{
+    display: block;
+    /* label mengambil satu baris penuh */
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 6px;
+    /* jarak label ke input */
+}
+
+/* Semua field lebar sama 100%, padding, warna gellap dan border tipis */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width: 100%;
+    /* lebar seukuran containernya 640px*/
+    padding: 10px 14px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    font-family: inherit;
+    /* mengikuti font body */
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* saat diklick (focus): border jadi warba biru terang */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color: #1d4ed8;
+}
+
+.form-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-actions{
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.form-actions .btn{
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.form-actions .btn-outline{
+    border: 1px solid #334155;
+    background: none;
+}
