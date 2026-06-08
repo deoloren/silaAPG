@@ -1,161 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=dEvice-width, initial-scale=1.0" />
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajukan Layanan — SILA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+ 
+<body>
+ 
     <header class="navbar">
-      <div class="container navbar-inner">
-        <a href="index.html" class="logo">🎓 SILA</a>
-
-        <input type="checkbox" id="navToggle" class="nav-toggle" />
-        <label for="navToggle" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="layanan.html" class="active">Ajukan Layanan</a></li>
-            <li><a href="riwayat.html">Riwayat</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div class="container navbar-inner">
+            <a href="index.html" class="logo">🎓 SILA</a>
+            <input type="checkbox" id="navToggle" class="nav-toggle">
+            <label for="navToggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="layanan.html" class="active">Ajukan Layanan</a></li>
+                    <li><a href="riwayat.html">Riwayat</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
+ 
     <main>
-      <section class="section">
-        <div class="container">
-          <div style="text-align: center; margin-bottom: 40px">
-            <h1>Ajukan Layanan Akademik</h1>
-            <p class="section-desc">
-              Pilih dan isi formulir layanan yang Anda butuhkan di bawah ini.
-            </p>
-          </div>
-
-          <form
-            action="#"
-            method="post"
-            class="form-card"
-            onsubmit="return validasiForm();"
-          >
-            <fieldset>
-              <legend>Data Pengajuan</legend>
-
-              <div class="form-group">
-                <label for="nama">Nama Lengkap</label>
-                <input
-                  type="text"
-                  id="nama"
-                  name="nama"
-                  placeholder="Masukkan nama lengkap"
-                />
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="nim">NIM</label>
-                  <input
-                    type="text"
-                    id="nim"
-                    name="nim"
-                    placeholder="Contoh: 24122442"
-                    maxlength="8"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="prodi">Program Studi</label>
-                  <select id="prodi" name="prodi">
-                    <option value="" disabled selected>
-                      - Pilih Program Studi -
-                    </option>
-                    <option value="Sistem Informasi">Sistem Informasi</option>
-                    <option value="Teknik Informatika">
-                      Teknik Informatika
-                    </option>
-                    <option value="Manajemen">Manajemen</option>
-                    <option value="Akuntansi">Akuntansi</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="layanan">Jenis Layanan</label>
-                  <select id="layanan" name="layanan">
-                    <option value="">-Pilih Layanan-</option>
-                    <option value="SKA">SKA - Surat Aktif Kuliah</option>
-                    <option value="CAK">CAK - Cuti Akademik</option>
-                    <option value="TNM">TNM - Transkrip Nilai</option>
-                    <option value="PDA">PDA - Perubahan Data</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="tanggal">Tanggal Pengajuan</label>
-                <input type="date" id="tanggal" name="tanggal" />
-              </div>
-
-              <div class="form-group">
-                <label for="keterangan">Keterangan (Opsional)</label>
-                <textarea
-                  id="keterangan"
-                  name="keterangan"
-                  rows="3"
-                  placeholder="Jelaskan alasan pengajuan Anda..."
-                ></textarea>
-              </div>
-
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary">
-                  🚀 Ajukan Sekarang
-                </button>
-                <button type="reset" class="btn btn-outline">🔁 Reset</button>
-              </div>
-            </fieldset>
-          </form>
-
-          <div style="text-align: center; margin-top: 32px">
-            <a href="index.html" class="btn btn-outline"
-              >← Kembali ke Beranda</a
-            >
-          </div>
-        </div>
-      </section>
+        <section class="section">
+            <div class="container">
+                <h1>Ajukan Layanan Akademik</h1>
+                <p class="section-desc">Lengkapi form di bawah untuk mengajukan layanan akademik Anda.</p>
+ 
+                <form id="formPengajuan" class="form-card">
+                    <fieldset>
+                        <legend>Data Pengajuan</legend>
+ 
+                        <p id="formError" class="form-error"></p>
+ 
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+                        </div>
+ 
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nim">NIM</label>
+                                <input type="text" id="nim" name="nim" placeholder="Contoh: 12345678" maxlength="8">
+                            </div>
+                            <div class="form-group">
+                                <label for="prodi">Program Studi</label>
+                                <select id="prodi" name="prodi">
+                                    <option value="">— Pilih Program Studi —</option>
+                                    <option value="Sistem Informasi">Sistem Informasi</option>
+                                    <option value="Teknik Informatika">Teknik Informatika</option>
+                                    <option value="Manajemen">Manajemen</option>
+                                    <option value="Akuntansi">Akuntansi</option>
+                                </select>
+                            </div>
+                        </div>
+ 
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="layanan">Jenis Layanan</label>
+                                <select id="layanan" name="layanan">
+                                    <option value="">— Pilih Layanan —</option>
+                                    <option value="SKA">SKA — Surat Aktif Kuliah</option>
+                                    <option value="CAK">CAK — Cuti Akademik</option>
+                                    <option value="TNM">TNM — Transkrip Nilai</option>
+                                    <option value="PDA">PDA — Perubahan Data</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tanggal">Tanggal Pengajuan</label>
+                                <input type="date" id="tanggal" name="tanggal">
+                            </div>
+                        </div>
+ 
+                        <div class="form-group">
+                            <label for="keterangan">Keterangan (opsional)</label>
+                            <textarea id="keterangan" name="keterangan" rows="3"
+                                placeholder="Jelaskan alasan pengajuan Anda..."></textarea>
+                        </div>
+ 
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">🚀 Ajukan Sekarang</button>
+                            <button type="reset" class="btn btn-outline">↺ Reset</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
     </main>
-
+ 
     <footer class="footer">
-      <div class="container footer-inner">
-        <div>
-          <strong>🎓 SILA</strong>
-          <p>Platform digital untuk pengajuan layanan akademik mahasiswa.</p>
+        <div class="container footer-inner">
+            <div>
+                <strong>🎓 SILA</strong>
+                <p>Platform digital untuk pengajuan layanan akademik mahasiswa.</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="layanan.html">Ajukan Layanan</a></li>
+                    <li><a href="riwayat.html">Riwayat</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-nav">
-          <h4>Navigasi</h4>
-          <ul>
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="layanan.html">Ajukan Layanan</a></li>
-            <li><a href="riwayat.html">Riwayat</a></li>
-          </ul>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 SILA — Dibuat untuk tugas Pemrograman Web</p>
+            </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <p>&copy; 2026 SILA — Dibuat untuk tugas Pemrograman Web</p>
-        </div>
-      </div>
     </footer>
+ 
     <script src="js/script.js"></script>
-  </body>
+ 
+</body>
+ 
 </html>
+ 

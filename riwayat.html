@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
+ 
 <body>
-
-    <!-- HEADER & NAVIGASI -->
+ 
     <header class="navbar">
         <div class="container navbar-inner">
             <a href="index.html" class="logo">🎓 SILA</a>
@@ -32,18 +31,44 @@
             </nav>
         </div>
     </header>
-
+ 
     <main>
         <section class="section">
             <div class="container">
                 <h1>Riwayat Pengajuan</h1>
                 <p class="section-desc">Daftar semua pengajuan layanan akademik yang telah Anda buat.</p>
-                <p><em>Tabel riwayat akan tersedia pada tahap berikutnya.</em></p>
+ 
+                <div class="toolbar">
+                    <span id="dataCount">0 pengajuan</span>
+                    <button id="btnHapusSemua" class="btn btn-outline" style="display: none;">🗑 Hapus Semua</button>
+                </div>
+ 
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NIM</th>
+                                <th>Layanan</th>
+                                <th>Tanggal</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Data diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+ 
+                <div id="emptyState" class="empty-state" style="display: none;">
+                    <p>🗂️ Belum ada pengajuan.</p>
+                    <a href="layanan.html" class="btn btn-primary">➕ Ajukan Layanan</a>
+                </div>
             </div>
         </section>
     </main>
-
-    <!-- FOOTER -->
+ 
     <footer class="footer">
         <div class="container footer-inner">
             <div>
@@ -65,7 +90,10 @@
             </div>
         </div>
     </footer>
-
+ 
+    <script src="js/script.js"></script>
+ 
 </body>
-
+ 
 </html>
+ 
