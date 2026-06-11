@@ -1,10 +1,3 @@
-/* ==
-=======
-JAVASCRIPT LANJUTAN
-SILA
-DOM, Event Handling, CRUD, localStorage
-===
-*/
 
 // ==========================================
 // DATA LAYER (localStorage)
@@ -38,7 +31,10 @@ function formatTanggal(dateStr) {
 // ==========================================
 // FORM HANDLING
 // ==========================================
-// Menangani form pengajuan: mode tambah (create) dan mode edit (update) berdasarkan parameter URL.
+// Menangani form pengajuan: mode tambah (create)
+//  dan mode edit (update) berdasarkan parameter URL
+// tugas form: mengumpulkan input user, validasi, creat data baru, updete data baru,
+//  lalu simpan ke localStorage.
 
 function initForm() {
     const form = document.getElementById('formPengajuan');
@@ -46,6 +42,7 @@ function initForm() {
 
     // - Deteksi Mode Edit
     // URLSearchParams membaca parameter dari URL, contoh: layanan.html?edit=1234 -> editId = '1234'
+    // jika parametar edit ditemuka, maka data lama ajann tampilkan, kembali ke dalam From.
     const urlParams = new URLSearchParams(window.location.search);
     const editId = urlParams.get('edit');
     let editMode = false;
@@ -53,8 +50,7 @@ function initForm() {
     if (editId) {
         // Cari item yang akan diedit berdasarkan ID
         const data = getData();
-        const itemToEdit = data.find(function (item) { 
-            return item.id == editId; 
+        const itemToEdit = data.find(function (item) { return item.id == editId; 
         });
 
         if (itemToEdit) {
